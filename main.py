@@ -33,8 +33,9 @@ def saveData(sides,chi,pvalue,rollData):
     file.write("D"+str(sides) + " Test\n")
     now = datetime.datetime.now()
     file.write("Created: %d/%d/%d\n" %( now.day, now.month, now.year))
-    file.write("Chi-squared value: %d\n" %chi)
-    file.write("P-value: %d\n" %pvalue)
+    print(chi, pvalue)
+    file.write("Chi-squared value: %f\n" %chi)
+    file.write("P-value: %f\n" %pvalue)
     file.write("Actual data: \n")
     for i in range(len(rollData)):
         file.write("%d: %d\n" %(i+1,rollData[i]))
